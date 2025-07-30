@@ -54,10 +54,11 @@ class CMB2_Type_Switch extends CMB2_Type_Checkbox {
         ?>
         <style type="text/css">
             .cmb2-switch {
+                margin-top: 4px;
                 position: relative;
                 display: inline-block;
-                width: 40px;
-                height: 20px;
+                width: 48px;
+                height: 24px;
                 margin-right: 10px;
             }
             .cmb2-switch input {
@@ -80,8 +81,8 @@ class CMB2_Type_Switch extends CMB2_Type_Checkbox {
             .cmb2-switch-slider:before {
                 position: absolute;
                 content: "";
-                height: 16px;
-                width: 16px;
+                height: 20px;
+                width: 20px;
                 left: 2px;
                 bottom: 2px;
                 background-color: white;
@@ -89,13 +90,13 @@ class CMB2_Type_Switch extends CMB2_Type_Checkbox {
                 border-radius: 50%;
             }
             .cmb2-switch input:checked + .cmb2-switch-slider {
-                background-color: #2271b1;
+                background-color: #34c759; /* Verde semântico Apple */
             }
             .cmb2-switch input:focus + .cmb2-switch-slider {
-                box-shadow: 0 0 1px #2271b1;
+                box-shadow: 0 0 1px #34c759;
             }
             .cmb2-switch input:checked + .cmb2-switch-slider:before {
-                transform: translateX(20px);
+                transform: translateX(24px);
             }
             /* Ajustes para o layout padrão do CMB2 */
             .cmb-type-switch .cmb-td {
