@@ -156,6 +156,14 @@ if ( ! class_exists( 'CMB2_Bootstrap_2120_Develop', false ) ) {
 			require_once CMB2_DIR . 'includes/CMB2_Base.php';
 			require_once CMB2_DIR . 'includes/CMB2.php';
 			require_once CMB2_DIR . 'includes/helper-functions.php';
+			require_once CMB2_DIR . 'includes/CMB2_Field_Icons.php';
+
+			// Inicializa os ícones dos campos após o CMB2 estar pronto
+			add_action('cmb2_init', function() {
+				if (class_exists('CMB2_Field_Icons')) {
+					CMB2_Field_Icons::init();
+				}
+			});
 
 			// Now kick off the class autoloader.
 			spl_autoload_register( 'cmb2_autoload_classes' );
