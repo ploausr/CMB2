@@ -13,7 +13,9 @@
 		"start": "node ./node_modules/grunt-cli/bin/grunt watch",
 		"watch": "node ./node_modules/grunt-cli/bin/grunt watch",
 		"cypress": "npm run env start && npm run env clean tests && npx cypress run --config video=false",
-		"phptests": "vendor/bin/phpunit"
+		"phptests": "vendor/bin/phpunit",
+		"build": "npm run copy-prod",
+		"copy-prod": "copyfiles includes/* includes/**/* js/* js/**/* css/* css/**/* languages/* languages/**/* init.php bootstrap.php index.php ../cmb2-master-plugin"
 	},
 	"repository": {
 		"type": "git",
@@ -31,6 +33,7 @@
 	"homepage": "https://cmb2.io",
 	"devDependencies": {
 		"@wordpress/env": "^5.5.0",
+		"copyfiles": "^2.4.1",
 		"cypress": "^8.3.0",
 		"grunt": "^1.0.4",
 		"grunt-asciify": "~0.2.2",
