@@ -672,4 +672,7 @@ class CMB2_Types {
 		return $this->get_new_render_type( __FUNCTION__, 'CMB2_Type_File', $args )->render();
 	}
 
+	public function switch() {
+		return $this->get_new_render_type(__FUNCTION__, 'CMB2_Type_Switch')->render();
+	}
 }

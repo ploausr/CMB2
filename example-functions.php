@@ -805,3 +805,11 @@ function yourprefix_register_rest_api_box() {
 		'show_in_rest' => WP_REST_Server::EDITABLE,// WP_REST_Server::ALLMETHODS|WP_REST_Server::READABLE, // Determines which HTTP methods the field is visible in. Will override the cmb2_box 'show_in_rest' param.
 	) );
 }
+
+$cmb_demo->add_field( array(
+    'name'    => esc_html__( 'Test Switch', 'cmb2' ),
+    'desc'    => esc_html__( 'Campo de alternância tipo switch', 'cmb2' ),
+    'id'      => 'yourprefix_demo_switch',
+    'type'    => 'switch',
+    'default' => 'off',
+) );
